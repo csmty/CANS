@@ -2,7 +2,7 @@
 # Rethinking Reconstruction and Denoising in the Dark:New Perspective, General Architecture and Beyond
 ## :star:Accepted by CVPR 2025
 This is a Tensorflow implementation of Rethinking Reconstruction and Denoising in the Dark:New Perspective, General Architecture and Beyond in CVPR 2025, by Tengyu Ma, Long Ma, Ziye Li,Yuetong Wang,Jinyuan Liu,Chengpei Xu, and Risheng Liu.
-![Comparison among recent state-of-the-art methods and our method.](\Figs\first.png)
+![Comparison among recent state-of-the-art methods and our method.](Figs/first.png)
 Comparison among recent state-of-the-art methods and our method.
 
 
@@ -34,11 +34,11 @@ You can perform training and testing through the following commands:runner.py, r
 
 
 ## 🔥Comparison results of the reconstruction task
-![Comparison results of the reconstruction task.](\Figs\com_2.png)
+![Comparison results of the reconstruction task.](Figs/com_2.png)
 ## 🔥Comparison results of the denoising task
-![Comparison results of the denoising task.](\Figs\com_denoising.png)
+![Comparison results of the denoising task.](Figs/com_denoising.png)
 ## ⚡Results on High-level Vision Tasks
-![Comparison results of the denoising task.](\Figs\depth_segment.png)
+![Comparison results of the denoising task.](Figs/depth_segment.png)
 ## 📏Citation
 If you use our code and dataset for research, please cite our paper:
 
