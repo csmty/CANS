@@ -1,7 +1,10 @@
 
 # Rethinking Reconstruction and Denoising in the Dark:New Perspective, General Architecture and Beyond
 ## :star:Accepted by CVPR 2025
-This is a Pytorch implementation of Rethinking Reconstruction and Denoising in the Dark:New Perspective, General Architecture and Beyond in CVPR 2025, by Tengyu Ma, Long Ma, Ziye Li,Yuetong Wang,Jinyuan Liu,Chengpei Xu, and Risheng Liu.
+
+This is the official implementation of the paper  "[Rethinking Reconstruction and Denoising in the Dark:New Perspective, General Architecture and Beyond](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_Rethinking_Reconstruction_and_Denoising_in_the_Dark_New_Perspective_General_CVPR_2025_paper.pdf)".
+
+
 ![Comparison among recent state-of-the-art methods and our method.](./Figs/first.png)
 Comparison among recent state-of-the-art methods and our method.
 
