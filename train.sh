@@ -1,0 +1,1 @@
+python runner.py -cfg configs/CANS_Plus/Sony.yml

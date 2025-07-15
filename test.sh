@@ -1,0 +1,1 @@
+python runner_test.py -cfg configs/CANS_Plus/Sony.yml --test --save-image --pretrain pretrained_weights/CANS_Plus/Sony.pth

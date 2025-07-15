@@ -1,0 +1,103 @@
+name: Results/CANS
+tag: Fuji
+testset_as_validset: true
+valid_per_epoch: 1
+print_per_iter: 100
+save_per_epoch: 30
+manual_seed: 3407
+profile: CANS_profile
+
+loss:
+  classes:
+  - L1Loss
+  - L1Loss
+  types:
+  - L1
+  - L1
+  which_gt:
+  - raw
+  - rgb
+  which_stage:
+  - raw
+  - rgb
+  weights:
+  - 1.0
+  - 1.0
+data:
+  type: FujiDictSet
+  camera: Fuji
+  data_path: /home/tyma/data/SID
+  load_npy: true
+  num_workers: 8
+  pin_memory: true
+  process:
+    max_clip: 1.0
+    min_clip: null
+    transpose: false
+    h_flip: true
+    v_flip: true
+    rotation: false
+  test:
+    batch_size: 1
+    image_list_file: Fuji_test_list.txt
+    max_samples: null
+    patch_size: null
+    only_00: true
+  train:
+    batch_size: 1
+    image_list_file: Fuji_new_train_list.txt
+    max_samples: null
+    patch_size: 1536
+    repeat: 1
+  valid:
+    batch_size: 2
+    image_list_file: Fuji_val_list.txt
+    max_samples: null
+    patch_size: 1024
+  persistent_workers: false
+
+model:
+  type: CANS
+  in_channel: 9
+  width: 32
+  enc_blk_nums:
+  - 2
+  - 2
+  - 2
+  - 2
+  middle_blk_num: 2
+  dec_blk_nums:
+  - 2
+  - 2
+  - 2
+  - 2
+  adaptive_size: 3
+  block_size: 3
+train:
+  forward_type: train_forward_CANS
+  base_lr: 1.0e-04
+  clip_grad: 0.1
+  early_stop: 1000
+  epochs: 1000
+  lr_scheduler:
+    type: cosine
+    t_in_epochs: true
+  optimizer:
+    type: adamw
+    eps: 1.0e-08
+    betas:
+    - 0.9
+    - 0.999
+    momentum: 0.9
+  min_lr: 1.0e-06
+  start_epoch: 0
+  warmup_epochs: 0
+  weight_decay: 0
+  pretrained: pretrained_weights/CANS/Fuji.pth
+  auto_resume: false
+test:
+  forward_type: test_forward_CANS
+  which_gt: rgb
+  which_stage: rgb
+  round: false
+  save_image: true
